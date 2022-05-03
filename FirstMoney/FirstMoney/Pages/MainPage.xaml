@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:microcharts="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms" 
+             x:Class="FirstMoney.MainPage" x:Name="HomePage" Appearing="HomePage_Appearing"
+             Title="Home">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Frame>
+                <Frame.BackgroundColor>
+                    <Color>#383838</Color>
+                </Frame.BackgroundColor>
+                <Label TextColor="White" Text="Home" x:Name="TitleLabel"/>
+            </Frame>
+            <Grid x:Name="MainLayout" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="2*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="2*"/>
+                </Grid.RowDefinitions>
+                <microcharts:ChartView x:Name="chartView" Grid.Row="0">
+                    <microcharts:ChartView.GestureRecognizers>
+                        <TapGestureRecognizer
+                                Tapped="OnTapGestureRecognizerTapped"
+                                NumberOfTapsRequired="2" /> 
+                    </microcharts:ChartView.GestureRecognizers>
+                </microcharts:ChartView>
+                <StackLayout x:Name="FavoritesCategoryLayout" Orientation="Horizontal" Grid.Row="1"/>
+                <Grid x:Name="TotalMoneyLayout" Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="8*"/>
+                        <ColumnDefinition Width="2*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="TotalMoneyLabel"
+                        FontSize="Title" TextColor="White" 
+                        HorizontalOptions="CenterAndExpand"
+                        Grid.Column="0"/>
+                    <Picker TextColor="White"
+                        x:Name="CurrencyPicker" 
+                        VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                        SelectedIndexChanged="CurrencyPicker_SelectedIndexChanged"
+                        Grid.Column="1"
+                        HorizontalTextAlignment="Center">
+                    </Picker>
+                </Grid>
+                <StackLayout x:Name="AddTransactionLayout" Orientation="Vertical" Grid.Row="3" HorizontalOptions="CenterAndExpand" Margin="5">
+                    <Button Padding="5" x:Name="AddTransactionButton" Text="+" Clicked="AddTransactionButton_Clicked"
+                            CornerRadius="60" HeightRequest="90" WidthRequest="90" BorderWidth="2"
+                            FontSize="Large"/>
+                </StackLayout>
+            </Grid>
+            <StackLayout.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Left" Swiped="OnSwipedToList" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.BackgroundColor>
+        <Color>#1f1f1f</Color>
+    </ContentPage.BackgroundColor>
+</ContentPage>

@@ -1,0 +1,16 @@
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\bin\Debug\netstandard2.1\FirstMoney.deps.json
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\bin\Debug\netstandard2.1\FirstMoney.dll
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\bin\Debug\netstandard2.1\ref\FirstMoney.dll
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\bin\Debug\netstandard2.1\FirstMoney.pdb
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\FirstMoney.csproj.AssemblyReference.cache
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\FirstMoney.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\App.xaml.g.cs
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\Pages\MainPage.xaml.g.cs
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\FirstMoney.AssemblyInfoInputs.cache
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\FirstMoney.AssemblyInfo.cs
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\FirstMoney.csproj.CoreCompileInputs.cache
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\XamlC.stamp
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\FirstMoney.dll
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\ref\FirstMoney.dll
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\FirstMoney.pdb
+C:\Users\Andrey\source\repos\FirstMoney\FirstMoney\FirstMoney\obj\Debug\netstandard2.1\Pages\Crud\CreateTransactionPage.xaml.g.cs

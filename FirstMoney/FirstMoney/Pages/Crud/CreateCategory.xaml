@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstMoney.Pages.Crud.CreateCategory">
+    <ContentPage.Content>
+        <StackLayoutOrientation="Vertical" VerticalOptions="FillAndExpand">
+            <Frame>
+                <Frame.BackgroundColor>
+                    <Color>#383838</Color>
+                </Frame.BackgroundColor>
+                <Label TextColor="White" Text="Add a category"/>
+            </Frame>
+            <Grid x:Name="NameEntryGrid" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="White" Text="Name" 
+                       Grid.Column="0" Grid.Row="0" 
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Entry x:Name="NameEntry" 
+                       Grid.Column="1" Grid.Row="0"
+                       TextColor="White"
+                       Text="{Binding NewCategory.Name, Mode=TwoWay}"
+                       TextChanged="NameEntry_TextChanged"/>
+            </Grid>
+            <Grid x:Name="CurrencyPickerGrid" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="White" Text="Currency" 
+                       Grid.Column="0" Grid.Row="0" 
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Picker TextColor="White"
+                        x:Name="CurrencyPicker" 
+                        Grid.Column="1" Grid.Row="0" 
+                        VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                        SelectedIndexChanged="CurrencyPicker_SelectedIndexChanged">
+                </Picker>
+            </Grid>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button TextColor="White" Text="Add" x:Name="AddNewCategoryButton" Clicked="AddNewCategoryButton_Clicked"
+                     CornerRadius="60" HeightRequest="80" WidthRequest="80" BorderWidth="2" Margin="10" BackgroundColor="#053300"/>
+                <Button TextColor="White" Text="Cancel" x:Name="CancelAddition" Clicked="CancelAddition_Clicked"
+                     CornerRadius="60" HeightRequest="80" WidthRequest="80" BorderWidth="2" Margin="10" BackgroundColor="#330000"/>
+            </StackLayout>
+        </StackLayoutOrientation>
+    </ContentPage.Content>
+</ContentPage>

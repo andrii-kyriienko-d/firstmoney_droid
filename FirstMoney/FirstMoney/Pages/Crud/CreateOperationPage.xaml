@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FirstMoney;assembly=FirstMoney"
+             x:Class="FirstMoney.Pages.Crud.CreateOperationPage"
+             Title="Add an operation">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" VerticalOptions="FillAndExpand">
+            <Frame>
+                <Frame.BackgroundColor>
+                    <Color>#383838</Color>
+                </Frame.BackgroundColor>
+                <Label TextColor="White" Text="Add an operation"/>
+            </Frame>
+            <Grid x:Name="CategoryPickerGrid" Margin="5">  
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="White" Text="Category" 
+                       Grid.Column="0" Grid.Row="0" 
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Picker TextColor="White"
+                        x:Name="CategoryPicker" 
+                        Grid.Column="1" Grid.Row="0" 
+                        VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                        SelectedIndexChanged="CategoryPicker_SelectedIndexChanged">
+                </Picker>
+            </Grid>
+            <Grid x:Name="DatePickerGrid" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="White" Text="Event date" 
+                       Grid.Column="0" Grid.Row="0" 
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <DatePicker Date="{Binding NewTransaction.TransactionDate, Mode=TwoWay}"
+                            Grid.Column="1"
+                            Format="dd.MM.yyyy"
+                            TextColor="White"
+                            x:Name="TransactionDatePicker"/>
+            </Grid>
+            <Grid x:Name="TimePickerGrid" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="6*"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="White" Text="Event time" 
+                       Grid.Column="0" Grid.Row="0" 
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <TimePicker Time="{Binding NewTransaction.TransactionDate.TimeOfDay}"
+                            Grid.Column="1"
+                            TextColor="White"
+                            x:Name="TransactionTimePicker"/>
+            </Grid>
+            <Grid x:Name="SummEntryGrid" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="3*"/>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="2*"/>
+                </Grid.ColumnDefinitions>
+                <Label TextColor="White" Text="Total " 
+                       Grid.Column="0" Grid.Row="0" 
+                       HorizontalTextAlignment="Center" VerticalTextAlignment="Center"/>
+                <Entry x:Name="SummEntry"
+                    VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"
+                    Grid.Column="1" 
+                    Keyboard="Numeric"
+                    Text="{Binding NewTransaction.Summ, Mode=TwoWay}" TextColor="White"
+                    TextChanged="SummEntry_TextChanged">
+                </Entry>
+                <Picker TextColor="White"
+                        x:Name="CurrencyPicker" 
+                        Grid.Column="2" Grid.Row="0" 
+                        VerticalOptions="Center" HorizontalOptions="FillAndExpand"
+                        SelectedIndexChanged="CurrencyPicker_SelectedIndexChanged">
+                </Picker>
+            </Grid>
+            <Grid x:Name="NotesEntryGrid" Margin="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Label TextColor="White" Text="Notes "
+                       Margin="5"
+                       Grid.Column="0" Grid.Row="0" 
+                       HorizontalTextAlignment="Start" VerticalTextAlignment="Center"/>
+                <Editor  x:Name="NotesEntry"
+                       TextColor="White" 
+                       Grid.Row="1"
+                       HorizontalOptions="FillAndExpand"
+                       VerticalOptions="EndAndExpand"
+                       Text="{Binding NewTransaction.Notes, Mode=TwoWay}"
+                       BackgroundColor="#1c1c1c"
+                       TextChanged="NotesEntry_TextChanged"/>
+
+            </Grid>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <Button TextColor="White" Text="Add" x:Name="AddNewInvoceButton" Clicked="AddNewInvoceButton_Clicked"
+                     CornerRadius="60" HeightRequest="80" WidthRequest="80" BorderWidth="2" Margin="10" BackgroundColor="#053300"/>
+                <Button TextColor="White" Text="Cancel" x:Name="CancelAddition" Clicked="CancelAddition_Clicked"
+                     CornerRadius="60" HeightRequest="80" WidthRequest="80" BorderWidth="2" Margin="10" BackgroundColor="#330000"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.BackgroundColor>
+        <Color>#1f1f1f</Color>
+    </ContentPage.BackgroundColor>
+</ContentPage>

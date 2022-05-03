@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FirstMoney.Pages.OperationsList">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+            <Frame>
+                <Frame.BackgroundColor>
+                    <Color>#383838</Color>
+                </Frame.BackgroundColor>
+                <Label TextColor="White" Text="Operations" x:Name="TitleLabel"/>
+            </Frame>
+            <Grid x:Name="MainLayout" Margin="5">
+                <ListView x:Name="phonesList" ItemsSource="{Binding AllOperations}">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.View>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition/>
+                                            <RowDefinition/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                            <ColumnDefinition/>
+                                        </Grid.ColumnDefinitions>
+                                        <Label/>
+                                    </Grid>
+                                </ViewCell.View>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            <StackLayout.GestureRecognizers>
+                <SwipeGestureRecognizer Direction="Right" Swiped="OnSwipedToHome" />
+            </StackLayout.GestureRecognizers>
+        </StackLayout>
+    </ContentPage.Content>
+    <ContentPage.BackgroundColor>
+        <Color>#1f1f1f</Color>
+    </ContentPage.BackgroundColor>
+</ContentPage>

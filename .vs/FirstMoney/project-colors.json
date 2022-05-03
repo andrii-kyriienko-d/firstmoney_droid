@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "85ca5d0f-8ba4-4b27-8074-aacb9dcda2bf": {
+      "ProjectGuid": "85ca5d0f-8ba4-4b27-8074-aacb9dcda2bf",
+      "DisplayName": "FirstMoney.Android",
+      "ColorIndex": 0
+    },
+    "bdfa072d-52c8-48e9-81cd-6f056d8279b9": {
+      "ProjectGuid": "bdfa072d-52c8-48e9-81cd-6f056d8279b9",
+      "DisplayName": "FirstMoney",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
